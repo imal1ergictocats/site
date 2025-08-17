@@ -1,5 +1,5 @@
 new QRCode(document.getElementById("qrcode"), {
-  text: "https://discord.gg/n4qzSqGjzU",
+  text: "https://discord.gg/qAq6wAAfwc",
   width: 200,
   height: 200,
   colorDark: "#400063",
