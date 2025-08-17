@@ -1,0 +1,51 @@
+:root {
+  --violet: #400063;
+  --bg: #000000;
+}
+html, body { height: 100%; }
+body {
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  overflow: hidden;
+  touch-action: none;
+  cursor: none;
+}
+h1 {
+  font-family: 'Press Start 2P', monospace;
+  color: var(--violet);
+  font-size: 24px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+  user-select: none;
+}
+#qr-link {
+  display: inline-block;
+  outline: none;
+  border-radius: 12px;
+  cursor: none;
+  animation: pulseRotate 4s infinite ease-in-out;
+}
+#qr-link:hover { transform: scale(1.1) rotate(3deg); }
+@keyframes pulseRotate {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.05) rotate(2deg); }
+  50% { transform: scale(1.1) rotate(-2deg); }
+  75% { transform: scale(1.05) rotate(1deg); }
+}
+#qr-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(193,131,227,.6);
+  cursor: none;
+}
+#fx {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
